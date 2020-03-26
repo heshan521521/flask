@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> name = {{ name }}</p>
+    <p> age = {{ age }}</p>
+    <p> my_dict: city = {{ my_dict["city"] }}</p>
+    <p> my_dict: city = {{ my_dict.city }}</p>
+    <p> my_list: {{ my_list }}</p>
+    <! 通过下标进行取值>
+    <p> my_list[my_int]: {{ my_list[my_int] }}</p>
+
+    <! 对数字或列表中的值做加法运算>
+    <p> my_list[1] + my_list[2]: {{ my_list[1] + my_list[2] }}</p>
+    <! 直接对字符串做拼接>
+    <p> {{ "hello " + "world"}}</p>
+    <! 处理字符串>
+    <p> A{{ "        hello world           "}}A</p>
+    <! 用过滤器处理字符串,先去空格，再转换成大字>
+    <p> a{{ "        hello world           "| trim |upper}}a</p>
+
+    <hr/>
+    <p>{{ my_list | li2 }} </p>
+    <p>{{ my_list | li3 }} </p>
+</body>
+</html>

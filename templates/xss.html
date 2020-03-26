@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method = "POST">
+        <textarea name = "text"></textarea>
+        <input type="submit" value="提交">
+    </form>
+
+    <! 如果加上safe，则不会转义，容易被注入,如提交的代码为：<!script> alter("hey,you are lost!!"); <!/script>
+    {{ text | safe }}
+</body>
+</html>
