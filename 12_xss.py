@@ -3,7 +3,7 @@
 # @File  : 01_request.py
 # @Author: heshan
 # @Date  : 2020/3/22
-# @Desc  : template模板 的用法
+# @Desc  : xss 的用法
 
 
 from flask import Flask,request,render_template

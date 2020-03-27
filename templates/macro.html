@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% macro input() %}
+    <input type="text" value="" size="30">
+    {% endmacro %}
+
+    <h1>input 1</h1>
+    {{ input() }}
+
+    <h1>input 1</h1>
+    {{ input() }}
+    <hr/>
+    {%macro input_two(type, value, size)%}
+    <input type = "{{text}}" value="{{value}}" size="{{size}}">
+    {% endmacro %}
+
+    <h1>input_two</h1>
+    {{ input_two("password","",50) }}
+     <hr/>
+    {%macro input_three(type="type",value="",size=30)%}
+    <input type = "{{text}}" value="{{value}}" size="{{size}}">
+    {% endmacro %}
+
+    <h1>input_three</h1>
+    {{ input_three() }}
+
+    <h1>input_three</h1>
+    {{ input_three("password","",100) }}
+
+    <hr/>
+    {% import 'macro_template.html' as m_input_four %}
+    <h1>input_four</h1>
+    {{ m_input_four.input_four("tttt","hh",200) }}
+
+</body>
+</html>
